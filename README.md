@@ -86,7 +86,8 @@ The project follows a **medallion lakehouse architecture** implemented on Databr
 
 ## Dashboard & Business Insights
 
-![ds](https://github.com/omar1010101/fmcg-data-engineering-databricks/blob/0c4fc02edf12be45a39731328a606984d234aabc/dashboards/dashboard.jpeg)
+<img height="1000" alt="dashboard" src="https://github.com/user-attachments/assets/ac69ce9d-089b-4a73-a890-874802c059de" />
+
 
 ---
 
