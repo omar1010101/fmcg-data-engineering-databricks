@@ -86,6 +86,7 @@ The project follows a **medallion lakehouse architecture** implemented on Databr
 
 ## Dashboard & Business Insights
 
+![ds](dashboards/dashboard.png)
 
 ---
 
