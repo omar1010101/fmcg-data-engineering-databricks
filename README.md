@@ -16,6 +16,11 @@ This project solves that problem by building an end-to-end medallion lakehouse p
 * **Databricks Dashboard**
 * **Python**
 
+
+---
+
+
+
 ## Tech Stack
 
 | Category                   | Technology           | Purpose                                                |
@@ -28,6 +33,9 @@ This project solves that problem by building an end-to-end medallion lakehouse p
 | **Query Engine**           | Databricks SQL       | Analytical querying and data serving                   |
 | **Visualization**          | Databricks Dashboard | Executive KPI monitoring and reporting                 |
 | **Architecture Pattern**   | Medallion Lakehouse  | Multi-layer data processing and refinement             |
+
+
+---
 
 
 ## Architecture Overview
@@ -71,3 +79,20 @@ The project follows a **medallion lakehouse architecture** implemented on Databr
 * **Dashboard Delivery**
 
   * Final datasets are served through **Databricks SQL dashboards**, enabling consolidated KPI monitoring and executive-level business insights across the integrated post-acquisition environment.
+
+
+---
+
+
+## Dashboard & Business Insights
+
+
+---
+
+
+## 📫 Connect with Me
+
+- **Author:** *Omar EL KALKHA*
+- **LinkedIn:** [https://www.linkedin.com/in/omar-el-kalkha/](https://www.linkedin.com/in/omar-el-kalkha/)
+- **Email:** [omarelkalkha5@gmail.com](mailto:omarelkalkha5@gmail.com)
+
