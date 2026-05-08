@@ -76,6 +76,29 @@ The project follows a **medallion lakehouse architecture** implemented on Databr
 ---
 
 
+## Repository Structure
+
+```bash
+fmcg-data-engineering-databricks/
+├── notebooks/
+│   ├── 1_setup/
+│   │   ├── dim_date_table_creation.py
+│   │   ├── setup_catalogs.py
+│   │   └── utilities.py
+│   ├── 2_dimension_data_processing/
+│   │   ├── 1_customers_data_processing.py
+│   │   ├── 2_products_data_processing.py
+│   │   └── 3_pricing_data_processing.py
+│   └── 3_fact_data_processing/
+│       ├── 1_full_load_fact.py
+│       └── 2_incremental_load_fact.py
+└── README.md
+```
+
+> **Note:** All files in the `notebooks/` directory are exported Databricks source notebooks provided in Python script format for improved readability.
+---
+
+
 ## 📫 Connect with Me
 
 - **Author:** *Omar EL KALKHA*
