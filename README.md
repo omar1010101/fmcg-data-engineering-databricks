@@ -5,8 +5,44 @@ Following an [FMCG](https://en.wikipedia.org/wiki/Fast-moving_consumer_goods) (F
 
 This project solves that problem by building an end-to-end medallion lakehouse pipeline on *Databricks*. Raw data is ingested from *Amazon S3*, processed through *Bronze*, *Silver*, and *Gold* layers using *Delta Lake*, and served through executive dashboards to provide consolidated post-acquisition business analytics.
 
-**Technologies Used**
 
+
+---
+
+
+## Architecture
+
+<img width="1535" height="686" alt="architecture-databricks" src="https://github.com/user-attachments/assets/06b8c75f-fc16-4a6e-b267-fa058152cc2a" />
+
+
+The project follows a **medallion lakehouse architecture** implemented on Databricks to support scalable post-acquisition data integration and analytics.
+
+### Pipeline Workflow
+
+1. **Raw Data Ingestion** → FMCG operational datasets are uploaded to **Amazon S3** as the centralized raw data storage layer.
+
+2. **Historical Batch Processing (Backfill)** → Historical datasets are processed in batch to establish the initial analytical baseline across all business entities.
+
+3. **Incremental Processing for Live Updates** → New incoming records are incrementally processed to continuously refresh analytical datasets with the latest operational changes.
+
+4. **Bronze Layer** → Stores raw ingested data in its original format for traceability, auditability, and historical preservation.
+
+5. **Silver Layer** → Performs data cleaning, standardization, schema validation, and transformation to produce structured and reliable intermediate datasets.
+
+6. **Workflow Orchestration** → Databricks workflows coordinate task dependencies and automate sequential execution of ingestion and transformation pipelines.
+
+7. **Gold Layer** → Generates curated analytical datasets optimized for business reporting and KPI analysis.
+
+8. **Denormalized Analytical Views** → Business-ready denormalized views are created to simplify querying and improve dashboard performance.
+
+9. **Dashboard Delivery** → Final datasets are served through **Databricks SQL dashboards**, enabling consolidated KPI monitoring and executive-level business insights across the integrated post-acquisition environment.
+
+
+---
+
+
+## Tech Stack
+<!--
 * **Databricks**
 * **Apache Spark**
 * **PySpark**
@@ -15,14 +51,7 @@ This project solves that problem by building an end-to-end medallion lakehouse p
 * **Databricks SQL**
 * **Databricks Dashboard**
 * **Python**
-
-
----
-
-
-
-## Tech Stack
-
+-->
 | Category                   | Technology           | Purpose                                                |
 | -------------------------- | -------------------- | ------------------------------------------------------ |
 | **Cloud Storage**          | AWS S3               | Stores raw and processed datasets                      |
@@ -34,51 +63,6 @@ This project solves that problem by building an end-to-end medallion lakehouse p
 | **Visualization**          | Databricks Dashboard | Executive KPI monitoring and reporting                 |
 | **Architecture Pattern**   | Medallion Lakehouse  | Multi-layer data processing and refinement             |
 
-
----
-
-
-## Architecture Overview
-
-The project follows a **medallion lakehouse architecture** implemented on Databricks to support scalable post-acquisition data integration and analytics.
-
-### Pipeline Workflow
-
-* **Raw Data Ingestion**
-
-  * FMCG operational datasets are uploaded to **Amazon S3** as the centralized raw data storage layer.
-
-* **Historical Batch Processing (Backfill)**
-
-  * Historical datasets are processed in batch to establish the initial analytical baseline across all business entities.
-
-* **Incremental Processing for Live Updates**
-
-  * New incoming records are incrementally processed to continuously refresh analytical datasets with the latest operational changes.
-
-* **Bronze Layer**
-
-  * Stores raw ingested data in its original format for traceability, auditability, and historical preservation.
-
-* **Silver Layer**
-
-  * Performs data cleaning, standardization, schema validation, and transformation to produce structured and reliable intermediate datasets.
-
-* **Workflow Orchestration**
-
-  * Databricks workflows coordinate task dependencies and automate sequential execution of ingestion and transformation pipelines.
-
-* **Gold Layer**
-
-  * Generates curated analytical datasets optimized for business reporting and KPI analysis.
-
-* **Denormalized Analytical Views**
-
-  * Business-ready denormalized views are created to simplify querying and improve dashboard performance.
-
-* **Dashboard Delivery**
-
-  * Final datasets are served through **Databricks SQL dashboards**, enabling consolidated KPI monitoring and executive-level business insights across the integrated post-acquisition environment.
 
 
 ---
